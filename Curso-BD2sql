@@ -1,0 +1,7 @@
+--------------------Clase del sabado 07/10/2017------------------
+
+CREATE TABLE almacen (numero_almacen integer, 
+                    ubicacion_alamacen varchar (80),
+                    constraint pk_na primary key (numero_almacen)
+                    );
+                    
