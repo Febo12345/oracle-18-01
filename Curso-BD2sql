@@ -5,3 +5,23 @@ CREATE TABLE almacen (numero_almacen integer,
                     constraint pk_na primary key (numero_almacen)
                     );
                     
+-------------------Se genera SP para guarda una entidad o registro de tipo almacen---------
+
+create or replace procedure guardar_almacen (mi_id in integer,
+                            mi_ubicacion in varchar2)
+                            as 
+                            begin 
+                            ---Aqui la logica del procedimiento
+                  insert into almacen values (mi_id,mi_ubicacion);
+                  end;
+                  /
+                  
+                  
+-----------------Vamos a probar que funciona nuestro procedimiento---------------
+
+begin
+guardar_almacen(1,'PLYMOUTH');
+end;
+/
+
+select * from almacen;
